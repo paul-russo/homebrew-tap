@@ -1,25 +1,25 @@
 class Blots < Formula
   desc "A small, simple, expression-oriented programming language."
   homepage "https://github.com/paul-russo/blots-lang"
-  version "0.10.28"
+  version "0.10.29"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.28/blots-aarch64-apple-darwin.tar.xz"
-      sha256 "b51f04d7f282fbf422500a33d97bf3074dd8f03afdce3cb26a30ccb5057a6611"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.29/blots-aarch64-apple-darwin.tar.xz"
+      sha256 "49fc52161e904b48849f6ab5e8510b1e269c24e8de2b9418af2f1bd5b542442c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.28/blots-x86_64-apple-darwin.tar.xz"
-      sha256 "524f1a14403496ecb3adbd4374cf3129dd35949038f903d1ee5ccf1905b706a4"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.29/blots-x86_64-apple-darwin.tar.xz"
+      sha256 "79b1547ed5c45dd6439f2c0d7bc29d92ac41c3a4df79c13f6e1d443af00a6717"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.28/blots-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e41c20fc4c2cc5168069a97baffa3ddefeda405462fd7bf265d7f138877f9af9"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.29/blots-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "623617df29a58a9e803ae283c734bcea5f33f2251cdfa995fd43acc6ffcbafa4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.28/blots-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1332633a23fdf98f3caf4c65af21d311ad9e76f9df23c30ad248cb491a45a668"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.10.29/blots-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c58e7a41a1199bb605d003cffde74745341430d1eb86b87387dded6e4860a2c6"
     end
   end
   license "MIT"
