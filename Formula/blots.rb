@@ -1,25 +1,25 @@
 class Blots < Formula
   desc "A small, simple, expression-oriented programming language."
   homepage "https://github.com/paul-russo/blots-lang"
-  version "0.15.0"
+  version "0.20.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.15.0/blots-aarch64-apple-darwin.tar.xz"
-      sha256 "581b79589bafe0185b56cd43f20aa5d06d5b716f6d8fb8626820af6590af6388"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.20.1/blots-aarch64-apple-darwin.tar.xz"
+      sha256 "8f8cd224bd750068770f8111323e3c0302b69a37fdc913309b3843c8ddafc376"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.15.0/blots-x86_64-apple-darwin.tar.xz"
-      sha256 "55b4d9fefe57eebd6f1837d015ab2a05571102d3b5d67524f60c71a6d63149ec"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.20.1/blots-x86_64-apple-darwin.tar.xz"
+      sha256 "e5f22b276d69e108ac2e4ba24b46bfa7fbfaa10f0e3e2618ee863a1bdb7496c3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.15.0/blots-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4b99bfe73304cc133ef2444d11ff9697a96bd22825f1f4a9ca02a4fd6edef3a5"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.20.1/blots-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "878f86b74dde48b9b23b14b3b4cc419b9eed4a67f1c950fc2a9f199bb493f214"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/paul-russo/blots-lang/releases/download/v0.15.0/blots-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f5269702dfa32d617e9d6b3f0fa7b9d14a5e2b47b82516b5a17f5f7fec678e11"
+      url "https://github.com/paul-russo/blots-lang/releases/download/v0.20.1/blots-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d807c304b8dc9bfa3b7c58edbbf1519ee8f6b7a1b2f04f3bb8482decc6737bac"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Blots < Formula
   end
 
   def install
-    bin.install "blots" if OS.mac? && Hardware::CPU.arm?
-    bin.install "blots" if OS.mac? && Hardware::CPU.intel?
-    bin.install "blots" if OS.linux? && Hardware::CPU.arm?
-    bin.install "blots" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "blots"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "blots"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "blots"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "blots"
+    end
 
     install_binary_aliases!
 
